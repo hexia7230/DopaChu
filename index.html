@@ -8,6 +8,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="apple-touch-icon" href="icon.png">
+<link rel="apple-touch-icon" sizes="125x125" href="icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+<link rel="apple-touch-icon" sizes="192x192" href="icon.png">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Outfit:wght@300;600;900&family=Share+Tech+Mono&display=swap');
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -2590,7 +2593,6 @@ function render(){
 
 // ═══ GAME LOOP ══════════════════════════════════════════════════════════════
 function loop(){update();render();requestAnimationFrame(loop);}
-loop();
 
 // ═══ SOUND SYSTEM (Web Audio API Synth) ══════════════════════════════════════
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -2967,6 +2969,7 @@ function loadCityMap(city) {
   });
 }
 loadCityMap(currentCity);
+loop(); // Start game loop after all initializations are complete
 
 // ═══ PWA SERVICE WORKER REGISTRATION ═════════════════════════════════════════
 if ('serviceWorker' in navigator) {
