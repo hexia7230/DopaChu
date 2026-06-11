@@ -1,0 +1,17 @@
+{
+  "name": "KURAZIAN ORDER",
+  "short_name": "Kurazian",
+  "description": "Progressive Cosmic Horror Survivors Game",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0A0608",
+  "theme_color": "#C5A03F",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "125x125",
+      "type": "image/png"
+    }
+  ]
+}
